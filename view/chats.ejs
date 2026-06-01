@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="page">
+        <h1>Chat Board</h1>
+
+        <div class="toolbar">
+            <form method="get" action="/chats/new">
+                <button type="submit">Add New Chat</button>
+            </form>
+        </div>
+
+    <% for (let chatItem of chat) { %>
+    <div class="chats">
+        <p><strong>From:</strong> <%= chatItem.from %></p>
+        <p><strong>To:</strong> <%= chatItem.to %></p>
+        <p><strong>Message:</strong> <%= chatItem.message %></p>
+        <p class="meta"><%= chatItem.created_at.toLocaleString() %></p>
+        <div class="actions">
+            <a class="btn-edit" href="/chats/<%= chatItem._id %>/edit">Edit</a>
+            <form action="/chats/<%= chatItem._id %>/delete" method="POST">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+    <% } %>
+    </div>
+</body>
+</html>

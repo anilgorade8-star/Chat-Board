@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+body {
+  background: #e8f4f1;
+  padding: 36px 32px;
+  color: #0f2d27;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 28px;
+  color: #0a1f1c;
+  letter-spacing: -0.3px;
+}
+
+/* ── Toolbar ── */
+.toolbar {
+  margin-bottom: 28px;
+}
+
+.toolbar a {
+  text-decoration: none;
+  background: #0d9488;
+  color: #f0fdfa;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.toolbar a:hover {
+  background: #0f766e;
+  transform: translateY(-1px);
+}
+
+.toolbar a:active {
+  transform: translateY(0);
+}
+
+/* ── Chat Cards ── */
+.chats {
+  background: #ffffff;
+  padding: 22px 24px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid #b2dfdb;
+  border-left: 4px solid #0d9488;
+}
+
+.chats p {
+  margin-bottom: 8px;
+  line-height: 1.65;
+  font-size: 15px;
+  color: #1a3a35;
+}
+
+.chats strong {
+  color: #0a1f1c;
+  font-weight: 600;
+}
+
+/* ── Meta / Timestamp ── */
+.meta {
+  color: #5f9ea0;
+  font-size: 13px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #80cbc4;
+}
+
+/* ── Action Buttons ── */
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 7px 14px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, transform 0.1s;
+  text-decoration: none;
+}
+
+.btn-edit {
+  background: #ccfbf1;
+  color: #065f46;
+  border: 1px solid #99f6e4;
+}
+
+.btn-edit:hover {
+  background: #99f6e4;
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background: #ffe4e6;
+  color: #881337;
+  border: 1px solid #fda4af;
+}
+
+.btn-delete:hover {
+  background: #fda4af;
+  transform: translateY(-1px);
+}
+
+/* ── Form ── */
+form {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  max-width: 560px;
+  border: 1px solid #b2dfdb;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2e7d78;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 6px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 11px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #b2dfdb;
+  border-radius: 8px;
+  background: #f0fdfa;
+  font-size: 14px;
+  color: #0f2d27;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0d9488;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.14);
+  background: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+button {
+  background: #0d9488;
+  color: #f0fdfa;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #0f766e;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}

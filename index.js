@@ -15,14 +15,14 @@ app.use(express.urlencoded({ extended: true }))
 
 main()
 .then(()=>{
-    console.log("conection is set Up ")
+    console.log("connection is set up")
 })
 .catch((err)=>{
      console.log(err)
 });
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/whatapp');
+  await mongoose.connect(mongoUri);
 }
 // list chats
 app.get('/chats', async (req, res) => {
